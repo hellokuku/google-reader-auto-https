@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function checkForHttpAccessToGoogleReader(tabId, changeInfo, tab) {
+        var httpUrl = 'http://www.google.com/reader';
+        var httpsUrl = 'https://www.google.com/reader';
+        if (0 === tab.url.indexOf(httpUrl)) {
+          chrome.tabs.update(tab.id, {url: tab.url.replace(httpUrl, httpsUrl)});
+        }
+      };
+
+      chrome.tabs.onUpdated.addListener(checkForHttpAccessToGoogleReader);
+    </script>
+  </head>
+</html>

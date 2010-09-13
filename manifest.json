@@ -1,0 +1,14 @@
+{
+  "name": "Google Reader Auto Https",
+  "version": "1.0.3",
+  "description": "自动使用HTTPS方式访问Google Reader。 作者 @forresty",
+  "author" : "Forrest Ye",
+  "background_page": "background.html",
+  "icons": { 
+    "48": "icon.png",
+    "128": "icon.png" 
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
